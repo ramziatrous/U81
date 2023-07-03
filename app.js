@@ -6,7 +6,7 @@ const stadt = process.argv[2];
 
 const apiurl = `http://api.openweathermap.org/data/2.5/forecast?q=${stadt}&appid=${apikey}`
 
-axios.get(url)
+axios.get(apiurl)
 .then(response => {
     const weatherData = response.data;
     const temperature = weatherData.main.temp;
